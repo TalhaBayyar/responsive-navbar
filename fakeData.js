@@ -42,6 +42,6 @@ export const fakeData = {
     iletisim: 'İletişim',
     kayitOl: 'Kayıt Ol',
     girisYap: 'Giriş Yap',
-    color: 'rgba(12, 12, 255, 125)',
+    color: 'black',
 
   };

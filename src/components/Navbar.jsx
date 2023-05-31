@@ -13,22 +13,22 @@ const Navbar = () => {
 
 
   return (
-    <header className=" cursor-pointer container mx-auto px-4 py-6 flex items-center justify-between bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
+    <header className="px-4 py-6 flex items-center justify-between bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
       <a href="#" className="font-bold text-white text-xl">
         Talha
       </a>
       <nav className=''>
         <nav className='hidden md:block'>
         <ul class="flex items-center justify-center font-semibold" style={{ color: fakeData.color }}>
-          <li className='px-3 py-2'>{fakeData.anasayfa}</li>
-          <li className="relative group px-3 py-2 ">
-            <button className="hover:opacity-50 cursor-default" aria-haspopup="true">
+          <li className='px-2 py-2'>{fakeData.anasayfa}</li>
+          <li className="relative group px-3 py-2">
+            <button className="hover:opacity-50" >
             {fakeData.title}
             </button>
             <div
-              className="absolute sm:-left-44 top-3 transition group-hover:translate-y-2 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[260px] transform"
+              className="absolute sm:-left-44 top-6 transition group-hover:translate-y-2 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[260px] transform"
             >
-              <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
+              <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl ">
                 <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm"></div>
                 <div className="relative z-10">
                   <div className="grid grid-cols-2 gap-6">
@@ -179,28 +179,27 @@ const Navbar = () => {
       </nav>
         
      
-      {isOpen && (
-        <div className={`block md:hidden top-28 right-20 w-80 h-80 animate-slowOpen bg-gradient-to-r from-purple-500 via-pink-500 to-red-500`} style={{position: 'absolute', zIndex: 2}}>
+       {isOpen && (
+        <div className={`block md:hidden top-16 right-0 h-80 animate-slowOpen  bg-gradient-to-r from-red-500 via-pink-500 to-purple-400`} style={{position: 'absolute', zIndex: 2}}>
         
           <nav className=''>
-            <ul className="flex-col items-center justify-center font-semibold" style={{ color: fakeData.color }}>
+            <ul className="flex-col items-center justify-center" style={{ color: fakeData.color }}>
               <li className='px-3 py-2'>{fakeData.anasayfa}</li>
-              <li className="relative group px-3 py-2 ">
+              <li className="relative group ">
                 <button className="hover:opacity-50 cursor-default " aria-haspopup="true">
                 {fakeData.title}
                 </button>
                 <div
-                  className="absolute right-36 top-3 transition group-hover:translate-y-2 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[260px] transform"
+                  className="absolute right-28 top-3 transition group-hover:translate-y-2 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform"
                 >
-                  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-                    <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm"></div>
+                  <div className="relative top-0 p-6 bg-white rounded-xl shadow-xl w-full">
                     <div className="relative z-10 ">
                       <div className="grid grid-cols-2 gap-6">
                         <div>
-                          <p className="uppercase tracking-wider text-gray-500 font-medium text-[12px] ">
+                          <p className="text-gray-500 text-[11px]">
                           {fakeData.hizmetlerimiz[0].title}
                           </p>
-                          <ul className="mt-3 text-[15px]">
+                          <ul className="mt-3 text-[10px]">
                             {fakeData.hizmetlerimiz[0].subItems.map((item, index) => (
                               <li key={index}>
                                 <a
@@ -214,10 +213,10 @@ const Navbar = () => {
                           </ul>
                         </div>
                         <div className=''>
-                          <p className="uppercase tracking-wider text-gray-500 font-medium text-[13px]">
+                          <p className="text-gray-500 text-[11px]">
                           {fakeData.hizmetlerimiz[1].title} 
                           </p>
-                          <ul className="mt-4 text-[15px]">
+                          <ul className="mt-4 text-[10px]">
                             {fakeData.hizmetlerimiz[1].subItems.map((item, index) => (
                               <li key={index}>
                                 <a
@@ -231,10 +230,10 @@ const Navbar = () => {
                           </ul>
                           {fakeData.hizmetlerimiz[1].additionalItems && (
                             <div>
-                              <p className="mt-4 uppercase tracking-wider text-gray-500 font-medium text-[13px]">
+                              <p className="mt-2 text-gray-500 text-[11px]">
                                 {fakeData.hizmetlerimiz[1].additionalItems.title}
                               </p>
-                              <ul className="text-[15px]">
+                              <ul className="text-[10px]">
                                 {fakeData.hizmetlerimiz[1].additionalItems.subItems.map((item, index) => (
                                   <li key={index}>
                                     <a
@@ -259,14 +258,14 @@ const Navbar = () => {
                   {fakeData.hakkimizda.title}
                 </button>
                 <div
-                  className="absolute left-4 top-3 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[360px] transform"
+                  className="absolute right-28 top-3 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform"
                 >
-                  <div className="relative top-6 p-6 bg-white rounded-xl shadow-xl w-full">
-                    <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 -translate-x-4 transition-transform group-hover:translate-x-[105px] duration-500 ease-in-out rounded-sm"></div>
+                  <div className="relative top-0 px-4 bg-white rounded-xl shadow-xl w-full">
+                   
                     <div className="relative z-10">
                       <div className="grid grid-cols-2 gap-6">
                         <div>
-                          <ul className="mt-3 text-[15px]">
+                          <ul className="text-[10px]">
                             {fakeData.hakkimizda.subItems.slice(0, 4).map((item, index) => (
                               <li key={index}>
                                 <a
@@ -280,10 +279,10 @@ const Navbar = () => {
                           </ul>
                         </div>
                         <div>
-                          <p className="uppercase tracking-wider text-gray-500 font-medium text-[13px]">
+                          <p className=" text-gray-500  text-[12px]">
                           {fakeData.hakkimizda.referanslarimiz.title}
                           </p>
-                          <ul className="mt-3 text-[15px]">
+                          <ul className="mt-1 text-[11px]">
                             <li>Geçmiş Referanslar</li>
                             {fakeData.hakkimizda.referanslarimiz.gecmisReferanslar.map((item, index) => (
                               <li key={index}>
@@ -326,7 +325,9 @@ const Navbar = () => {
             </ul>
             
           </nav> 
-          <nav className=''>
+
+          
+          {/* <nav className=''>
           
             <ul>
               <li>
@@ -355,13 +356,13 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-          
+           */}
         
         </div>
 
         
-      
-      )}
+  
+      )} 
 
   
 
