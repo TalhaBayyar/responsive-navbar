@@ -1,16 +1,13 @@
-import React from 'react';
 import { fakeData } from '../../fakeData';
 import { useState } from 'react';
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
     console.log("click :" + isOpen)
   }
-
 
   return (
     <header className="px-4 py-6 flex items-center justify-between bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
@@ -174,13 +171,12 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-        </div>
-           
+        </div>   
       </nav>
-        
-     
+
+      {/* Hmaburger Menu */}
        {isOpen && (
-        <div className={`block md:hidden top-16 right-0 h-80 animate-slowOpen  bg-gradient-to-r from-red-500 via-pink-500 to-purple-400`} style={{position: 'absolute', zIndex: 2}}>
+        <div className={`block md:hidden top-16 right-0 animate-slowOpen bg-gradient-to-r from-red-500 via-pink-500 to-purple-400`} style={{position: 'absolute', zIndex: 2}}>
         
           <nav className=''>
             <ul className="flex-col items-center justify-center" style={{ color: fakeData.color }}>
@@ -261,7 +257,6 @@ const Navbar = () => {
                   className="absolute right-28 top-3 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform"
                 >
                   <div className="relative top-0 px-4 bg-white rounded-xl shadow-xl w-full">
-                   
                     <div className="relative z-10">
                       <div className="grid grid-cols-2 gap-6">
                         <div>
@@ -312,22 +307,19 @@ const Navbar = () => {
                   </div>
                 </div>
               </li>
-              <li className="px-3 py-2 relative group cursor-pointer">
-                <a href="#" class="hover:opacity-50 cursor-default">
+              <li className="px-3 py-2 relative group">
+                <a href="#" class="hover:opacity-50">
                   {fakeData.iletisim}
                 </a>
               </li>
-              <li className="px-3 py-2 relative group cursor-pointer">
-                <a href="#" className="hover:opacity-50 cursor-default">
+              <li className="px-3 py-2 relative group">
+                <a href="#" className="hover:opacity-50">
                   {fakeData.kayitOl}
                 </a>
               </li>
             </ul>
-            
           </nav> 
-
-          
-          {/* <nav className=''>
+           <nav className=''>
           
             <ul>
               <li>
@@ -356,21 +348,10 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-           */}
-        
         </div>
-
-        
-  
       )} 
-
-  
-
-
-
-
+      {/* Hmaburger Menu */}
       <nav className='hidden md:block'>
-        
         <ul>
           <li>
             <a
@@ -401,5 +382,4 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;
