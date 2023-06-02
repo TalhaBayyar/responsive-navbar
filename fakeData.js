@@ -68,9 +68,9 @@ export const fakeData = [
     link: '#',
     order: 3,
     css: 'text-white',
-    type: "maintButton",
+    type: "mainButton",
     children: [
-      { text: 'Biz Kimiz?', link: '#', order: 1, css: 'text-gray-600', type: "parentdButton" },
+      { text: 'Biz Kimiz?', link: '#', order: 1, css: 'text-gray-600', type: "parentButton" },
       { text: 'Kurumsal', link: '#', order: 2, css: 'text-gray-600', type: "parentButton" },
       {
         text: 'Referanslarımız',
@@ -84,11 +84,11 @@ export const fakeData = [
             link: '#',
             order: 1,
             css: 'text-gray-400',
-            type: "childtButton",
+            type: "childButton",
             children: [
-              { text: 'x referansı', link: '#', order: 1, css: 'text-gray-400' },
-              { text: 'y referansı', link: '#', order: 2, css: 'text-gray-400' },
-              { text: 'z referansı', link: '#', order: 3, css: 'text-gray-400' }
+              { text: 'x referansı', link: '#', order: 1, css: 'text-gray-400', type: "childButton2" },
+              { text: 'y referansı', link: '#', order: 2, css: 'text-gray-400', type: "childButton2" },
+              { text: 'z referansı', link: '#', order: 3, css: 'text-gray-400', type: "childButton2" }
             ]
           },
           {
@@ -96,11 +96,11 @@ export const fakeData = [
             link: '#',
             order: 2,
             css: 'text-gray-400',
-            type: "childtButton",
+            type: "childButton",
             children: [
-              { text: 'a referansı', link: '#', order: 1, css: 'text-gray-400' },
-              { text: 'b referansı', link: '#', order: 2, css: 'text-gray-400' },
-              { text: 'c referansı', link: '#', order: 3, css: 'text-gray-400' }
+              { text: 'a referansı', link: '#', order: 1, css: 'text-gray-400', type: "childButton2" },
+              { text: 'b referansı', link: '#', order: 2, css: 'text-gray-400', type: "childButton2" },
+              { text: 'c referansı', link: '#', order: 3, css: 'text-gray-400', type: "childButton2" }
             ]
           }
         ]
@@ -114,7 +114,7 @@ export const fakeData = [
     link: '#',
     order: 4,
     css: 'text-white',
-    type: "maintButton",
+    type: "mainButton",
     children: []
   },
   {
@@ -122,7 +122,7 @@ export const fakeData = [
     link: '#',
     order: 5,
     css: 'text-white',
-    type: "maintButton",
+    type: "mainButton",
     children: []
   },
   {
@@ -130,7 +130,7 @@ export const fakeData = [
     link: '#',
     order: 6,
     css: 'text-white',
-    type: "maintButton",
+    type: "mainButton",
     children: []
   },
   
