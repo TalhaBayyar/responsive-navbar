@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NavbarButton = ({ text, link, order, css, children, type }) => {
+const NavbarButton = ({ text, link, order, css, children, type, parenChildren }) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const hasChildren = children && children.length > 0;
 
@@ -12,65 +12,55 @@ const NavbarButton = ({ text, link, order, css, children, type }) => {
     setIsSubMenuOpen(false);
   };
 
-  const renderButton = () => {
-    switch (type) {
-      case "mainButton":
-        return (
-          <a href={link} className={`px-3 py-2 bg-orange-500 ${css}`}>
-            {text}
-          </a>
-        );
-      case "parentButton":
-        return (
-          <button
-            className={`px-3 py-2 bg-sky-500 relative  ${css}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            {text}
-          </button>
-        );
-
-        case "childButton2":
-            return (
-              <button
-                className={`px-3 py-2 bg-sky-500 relative right-44 top-20   ${css}`}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                {text}
-              </button>
-            );  
-        
-      case "childButton":
-        return (
-          <a href={link} className={`px-3 py-2 relative bg-orange-200 right-40 text-slate-700`}>
-            {text}
-          </a>
-        );
-      default:
-        
-
-
-        return null;
-    }
-  };
-
   return (
-    <li className="" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      {renderButton()}
-      {hasChildren && (
-        <ul className={`fixed justify-center items-center font-bold text-[12px] text-white ${isSubMenuOpen ? '' : 'hidden'}`}>
-          {children.map((child) => (
-            <li className=" ">
-              <a href={child.link} className={`px-3 py-2 ${child.css}`}>
-                <NavbarButton key={child.order} {...child} className="bg-sky-500" />
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </li>
+    <>
+      <div>
+        <div className='px-3 text-left md:cursor-pointer group'>
+          <h1 className='py-7 justify-between items-center md:pr-0 pr-5 group'>
+            {
+              type === 'mainButton' && (
+                <a href={link} className={`px-2 py-2  ${css}`}>
+                  {text}
+                </a>
+              )
+            }
+          </h1>
+          {   
+            hasChildren && (
+              <div>
+                <div className='absolute top-20 hidden group-hover:md:block hover:md:block'>
+                  <div className='py-3'>
+                    <div className='w-2 h-2 left-3  absolute mt-1 bg-ra bg-white- rotate-45'></div>
+                  </div>
+                  <div className={`bg-slate-700  text-white p-5 grid grid-cols-3 gap-10  border-4`}>
+                 {hasChildren && (children || []).map((child, index) => (
+  <div key={index}>
+    <h1 className='text-sm  my-2.5'>{child.text}</h1>
+    {(child.parenChildren || []).map((slink, sindex) => (
+      <div key={sindex}>
+        <a href={slink.link}>
+          {slink.text}
+        </a>
+        {(slink.childChildren || []).map((cc, ccIndex) => (
+          <div key={ccIndex}>
+            <a href={cc.link}>
+              {cc.text}
+            </a>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+))}
+
+                  </div>
+                </div>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </>
   );
 };
 

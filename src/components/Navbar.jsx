@@ -10,7 +10,7 @@ const Navbar = () => {
   }
   return (
     <div>
-    <nav className="bg-gradient-to-r from-yellow-300  to-blue-600">
+    <nav className=" bg-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16 ">
           <div className="flex items-center ">
@@ -25,17 +25,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-         
-        </div>
-      </div>
-    </nav>
-  </div>
-  );
-};
-
-export default Navbar;
-
- {/* <div className="md:hidden flex items-center mr-3 text-yellow-300">
+          <div className="md:hidden flex items-center mr-3 text-yellow-300">
             <button onClick={handleMenuClick} className='bg-none'>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 hover:cursor-pointer hover:opacity-50 focus:outline-none focus:opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -67,4 +57,13 @@ export default Navbar;
               </svg>
             </div>
         </div>
-      )} */}
+      )} 
+        </div>
+      </div>
+    </nav>
+  </div>
+  );
+};
+
+export default Navbar;
+

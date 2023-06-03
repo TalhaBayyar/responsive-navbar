@@ -21,7 +21,7 @@ export const fakeData = [
         order: 1,
         css: 'text-gray-600',
         type: "parentButton",
-        children: [
+        parenChildren: [
           { text: 'Frontend Teknolojileri', link: '#', order: 1, css: 'text-gray-400', type: "childButton" },
           { text: 'Backend Teknolojileri', link: '#', order: 2, css: 'text-gray-400', type: "childButton" },
           { text: 'AWS Hizmetleri', link: '#', order: 3, css: 'text-gray-400', type: "childButton" }
@@ -33,7 +33,7 @@ export const fakeData = [
         order: 2,
         css: 'text-gray-600',
         type: "parentButton",
-        children: [
+        parenChildren: [
           { text: 'Teknik Destek', link: '#', order: 1, css: 'text-gray-400', type: "childButton" },
           { text: 'Bilgilendirme Hizmetleri', link: '#', order: 2, css: 'text-gray-400', type: "childButton" },
           { text: 'Mentorluk Hizmetleri', link: '#', order: 2, css: 'text-gray-400', type: "childButton" },
@@ -42,10 +42,10 @@ export const fakeData = [
             link: '#',
             order: 1,
             css: 'text-gray-400',
-            type: "parentButton",
-            children: [
-              { text: 'Sertifikalı Danışmanlık Hizmeti', link: '#', order: 1, css: 'text-gray-400', type: "childButton" },
-              { text: 'Kurumsal Danışmanlık Hizmeti', link: '#', order: 2, css: 'text-gray-400', type: "childButton" }
+            type: "childButton",
+            childChildren: [
+              { text: 'Sertifikalı Danışmanlık Hizmeti', link: '#', order: 1, css: 'text-gray-400', type: "childrendButton" },
+              { text: 'Kurumsal Danışmanlık Hizmeti', link: '#', order: 2, css: 'text-gray-400', type: "childrendButton" }
             ]
           },
           { text: 'Eğitim Öğretim Planlama', link: '#', order: 2, css: 'text-gray-400', type: "childButton" },
@@ -59,7 +59,7 @@ export const fakeData = [
         order: 3,
         css: 'text-gray-600',
         type: "parentButton",
-        children: []
+        parenChildren: []
       }
     ]
   },
@@ -78,17 +78,17 @@ export const fakeData = [
         order: 3,
         css: 'text-gray-600',
         type: "parentButton",
-        children: [
+        parenChildren: [
           {
             text: 'Geçmiş Referanslar',
             link: '#',
             order: 1,
             css: 'text-gray-400',
             type: "childButton",
-            children: [
-              { text: 'x referansı', link: '#', order: 1, css: 'text-gray-400', type: "childButton2" },
-              { text: 'y referansı', link: '#', order: 2, css: 'text-gray-400', type: "childButton2" },
-              { text: 'z referansı', link: '#', order: 3, css: 'text-gray-400', type: "childButton2" }
+            childChildren: [
+              { text: 'x referansı', link: '#', order: 1, css: 'text-gray-400', type: "childrendButton" },
+              { text: 'y referansı', link: '#', order: 2, css: 'text-gray-400', type: "childrendButton" },
+              { text: 'z referansı', link: '#', order: 3, css: 'text-gray-400', type: "childrendButton" }
             ]
           },
           {
@@ -97,8 +97,8 @@ export const fakeData = [
             order: 2,
             css: 'text-gray-400',
             type: "childButton",
-            children: [
-              { text: 'a referansı', link: '#', order: 1, css: 'text-gray-400', type: "childButton2" },
+            childChildren: [
+              { text: 'a referansı', link: '#', order: 1, css: 'text-gray-400', type: "childrendButton" },
               { text: 'b referansı', link: '#', order: 2, css: 'text-gray-400', type: "childButton2" },
               { text: 'c referansı', link: '#', order: 3, css: 'text-gray-400', type: "childButton2" }
             ]
