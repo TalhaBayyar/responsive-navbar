@@ -56,18 +56,18 @@ const NavbarButton = ({ text, link,  css, children, type }) => {
         <div className={`${heading === text ? "md:hidden" : "hidden"} bg-gray-200`}>
           {  
             <div>
-              {(children || []).map((ss, index) => (
+              {(children || []).map((child, index) => (
                 <div key={index} className="rounded-lg mt-3 hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-                  <h1 className='uppercase tracking-wider text-gray-500 font-medium text-[12px] ml-4'>{ss.text}</h1>
-                  {(ss.parenChildren || []).map((ww, sindex) => (
-                    <div key={sindex}>
-                      <a href={ww.link} className='text-sm ml-6 hover:opacity-60 '>
-                        {ww.text}
+                  <h1 className='uppercase tracking-wider text-gray-500 font-medium text-[12px] ml-4'>{child.text}</h1>
+                  {(child.parenChildren || []).map((childTwo, twoindex) => (
+                    <div key={twoindex}>
+                      <a href={childTwo.link} className='text-sm ml-6 hover:opacity-60 '>
+                        {childTwo.text}
                       </a>
-                      {(ww.childChildren || []).map((cc, ccIndex) => (
-                        <div key={ccIndex}>
-                          <a href={cc.link} className='text-xs ml-8 hover:opacity-60'>
-                            {cc.text}
+                      {(childTwo.childChildren || []).map((childThree, threeIndex) => (
+                        <div key={threeIndex}>
+                          <a href={childThree.link} className='text-xs ml-8 hover:opacity-60'>
+                            {childThree.text}
                           </a>
                         </div>
                       ))
