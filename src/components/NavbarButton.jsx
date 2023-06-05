@@ -59,8 +59,8 @@ const NavbarButton = ({ text, link,  css, children, type }) => {
               {(children || []).map((child, index) => (
                 <div key={index} className="rounded-lg mt-3 hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
                   <h1 className='uppercase tracking-wider text-gray-500 font-medium text-[12px] ml-4'>{child.text}</h1>
-                  {(child.parenChildren || []).map((childTwo, twoindex) => (
-                    <div key={twoindex}>
+                  {(child.parenChildren || []).map((childTwo, twoIndex) => (
+                    <div key={twoIndex}>
                       <a href={childTwo.link} className='text-sm ml-6 hover:opacity-60 '>
                         {childTwo.text}
                       </a>
