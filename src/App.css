@@ -1,4 +1,10 @@
+.redressed{
+  font-family: 'Redressed', cursive;
+}
 
+.italiana{
+  font-family: 'Italiana', serif;
+}
 
 @keyframes slowOpen {
   0% {
